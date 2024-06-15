@@ -37,7 +37,13 @@ public class Question extends Entidade {
         this.question = question;
     }
 
+    public Question(Long id, String question) {
+        super(id);
+        this.question = question;
+    }
+
     public void addAnswer(Answer answer) {
+        answer.setQuestion(this);
         this.answers.add(answer);
     }
 
@@ -46,6 +52,7 @@ public class Question extends Entidade {
     }
 
     public void addAllAnswers(List<Answer> answers) {
+        this.getAnswers().forEach(answer -> answer.setQuestion(this));
         this.answers.addAll(answers);
     }
 

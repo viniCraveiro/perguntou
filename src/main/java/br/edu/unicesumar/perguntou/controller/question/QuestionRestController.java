@@ -1,17 +1,15 @@
 package br.edu.unicesumar.perguntou.controller.question;
 
+import br.edu.unicesumar.perguntou.controller.answer.AnswerDTO;
+import br.edu.unicesumar.perguntou.domain.answer.Answer;
 import br.edu.unicesumar.perguntou.domain.question.Question;
 import br.edu.unicesumar.perguntou.domain.question.QuestionService;
-import jakarta.persistence.Id;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RequestMapping("/api/v0/question")
 @RestController
@@ -25,25 +23,31 @@ public class QuestionRestController {
     }
 
     @PostMapping
-    public ResponseEntity<QuestionDTO> create(QuestionDTO questionDTO) {
+    public ResponseEntity<QuestionDTO> create(@RequestBody QuestionDTO questionDTO) {
         QuestionValidate.validate(questionDTO);
         Question question = new Question(questionDTO.question());
-        question.addAllAnswers(questionDTO.answer());
+        List<Answer> list = questionDTO.answer().stream().map(answerDTO -> new Answer(answerDTO.text(), answerDTO.option())).toList();
+        question.addAllAnswers(list);
         question.setCorrectAnswer(questionDTO.correctAnswer());
         QuestionDTO saved = questionService.save(question);
         return new ResponseEntity<>(saved, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<QuestionDTO> findById(Long id) {
+    public ResponseEntity<QuestionDTO> findById(@PathVariable  Long id) {
         Question question = questionService.findById(id);
-        return new ResponseEntity<>(new QuestionDTO(question.getQuestion(), question.getAnswers(), question.getCorrectAnswer()), HttpStatus.OK);
+        List<AnswerDTO> answerList = question.getAnswers().stream().map(answer -> new AnswerDTO(answer.getText(), answer.getOption())).toList();
+        return new ResponseEntity<>(new QuestionDTO(question.getQuestion(), answerList, question.getCorrectAnswer()), HttpStatus.OK);
     }
 
     @GetMapping()
-    public ResponseEntity<List<QuestionDTO>> findAll(){
+    public ResponseEntity<List<QuestionDTO>> findAll() {
         List<Question> questions = questionService.findAll();
-        List<QuestionDTO> questionsDTO = questions.stream().map(q -> new QuestionDTO(q.getQuestion(), q.getAnswers(), q.getCorrectAnswer())).collect(Collectors.toList());
+        List<AnswerDTO> answerList =
+                questions.stream().map(Question::getAnswers).flatMap(List::stream).map(answer -> new AnswerDTO(answer.getText(),
+                        answer.getOption())).toList();
+        List<QuestionDTO> questionsDTO =
+                questions.stream().map(q -> new QuestionDTO(q.getQuestion(), answerList, q.getCorrectAnswer())).toList();
         return new ResponseEntity<>(questionsDTO, HttpStatus.OK);
     }
 }
