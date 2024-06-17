@@ -50,8 +50,7 @@ public class QuestionRestController {
     @GetMapping()
     public ResponseEntity<List<QuestionDTO>> findAll() {
         List<Question> questions = questionService.findAll();
-        List<AnswerDTO> answerList = new ArrayList<>();
-        List<QuestionDTO> questionsDTO =
+            List<QuestionDTO> questionsDTO =
                 questions.stream().map(q -> new QuestionDTO(q.getQuestion(), q.getAnswers().stream().map(a -> new AnswerDTO(a.getText(),
                         a.getOption())).toList(), q.getCorrectAnswer())).toList();
         return new ResponseEntity<>(questionsDTO, HttpStatus.OK);
