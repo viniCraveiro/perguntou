@@ -30,9 +30,11 @@ const checkAnswer = (correctAnswer, selectedAnswer) => {
     if (selectedAnswer === correctAnswer) {
         feedbackElement.textContent = "Resposta correta!";
         feedbackElement.style.color = "green";
+        feedbackElement.style.opacity = 1;
     } else {
         feedbackElement.textContent = `Resposta incorreta. A resposta correta é ${correctAnswer}.`;
         feedbackElement.style.color = "red";
+        feedbackElement.style.opacity = 1;
     }
 };
 
