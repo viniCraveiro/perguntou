@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping("/api/v0/question")
@@ -26,15 +27,21 @@ public class QuestionRestController {
     public ResponseEntity<QuestionDTO> create(@RequestBody QuestionDTO questionDTO) {
         QuestionValidate.validate(questionDTO);
         Question question = new Question(questionDTO.question());
-        List<Answer> list = questionDTO.answer().stream().map(answerDTO -> new Answer(answerDTO.text(), answerDTO.option())).toList();
+        List<Answer> list = questionDTO.answer().stream().map(answerDTO -> new Answer(answerDTO.text(), answerDTO.alternative())).toList();
         question.addAllAnswers(list);
         question.setCorrectAnswer(questionDTO.correctAnswer());
         QuestionDTO saved = questionService.save(question);
         return new ResponseEntity<>(saved, HttpStatus.CREATED);
     }
 
+    @PostMapping("/list")
+    public ResponseEntity<String> createList(@RequestBody List<QuestionDTO> questionDTO) {
+        questionDTO.forEach(this::create);
+        return new ResponseEntity<>("Questions created successfully", HttpStatus.CREATED);
+    }
+
     @GetMapping("/{id}")
-    public ResponseEntity<QuestionDTO> findById(@PathVariable  Long id) {
+    public ResponseEntity<QuestionDTO> findById(@PathVariable Long id) {
         Question question = questionService.findById(id);
         List<AnswerDTO> answerList = question.getAnswers().stream().map(answer -> new AnswerDTO(answer.getText(), answer.getOption())).toList();
         return new ResponseEntity<>(new QuestionDTO(question.getQuestion(), answerList, question.getCorrectAnswer()), HttpStatus.OK);
@@ -43,9 +50,11 @@ public class QuestionRestController {
     @GetMapping()
     public ResponseEntity<List<QuestionDTO>> findAll() {
         List<Question> questions = questionService.findAll();
-        List<AnswerDTO> answerList =
-                questions.stream().map(Question::getAnswers).flatMap(List::stream).map(answer -> new AnswerDTO(answer.getText(),
-                        answer.getOption())).toList();
+        List<AnswerDTO> answerList = new ArrayList<>();
+        questions.forEach(q -> {
+            answerList.addAll(q.getAnswers().stream().map(answer -> new AnswerDTO(answer.getText(), answer.getOption())).toList());
+
+        });
         List<QuestionDTO> questionsDTO =
                 questions.stream().map(q -> new QuestionDTO(q.getQuestion(), answerList, q.getCorrectAnswer())).toList();
         return new ResponseEntity<>(questionsDTO, HttpStatus.OK);

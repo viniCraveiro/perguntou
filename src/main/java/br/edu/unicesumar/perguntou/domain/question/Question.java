@@ -52,7 +52,10 @@ public class Question extends Entidade {
     }
 
     public void addAllAnswers(List<Answer> answers) {
-        this.getAnswers().forEach(answer -> answer.setQuestion(this));
+        answers.forEach(op -> {
+            op.setQuestion(this);
+
+        });
         this.answers.addAll(answers);
     }
 

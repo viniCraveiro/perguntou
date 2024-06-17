@@ -1,0 +1,573 @@
+[
+  {
+    "question": "Qual é a capital da França?",
+    "answer": [
+      {
+        "text": "Paris",
+        "alternative": "A"
+      },
+      {
+        "text": "Londres",
+        "alternative": "B"
+      },
+      {
+        "text": "Madri",
+        "alternative": "C"
+      },
+      {
+        "text": "Roma",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "question": "Qual é o maior planeta do Sistema Solar?",
+    "answer": [
+      {
+        "text": "Terra",
+        "alternative": "A"
+      },
+      {
+        "text": "Júpiter",
+        "alternative": "B"
+      },
+      {
+        "text": "Marte",
+        "alternative": "C"
+      },
+      {
+        "text": "Saturno",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "question": "Quem escreveu 'Dom Quixote'?",
+    "answer": [
+      {
+        "text": "William Shakespeare",
+        "alternative": "A"
+      },
+      {
+        "text": "Miguel de Cervantes",
+        "alternative": "B"
+      },
+      {
+        "text": "Gabriel García Márquez",
+        "alternative": "C"
+      },
+      {
+        "text": "Jorge Luis Borges",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "question": "Qual é a fórmula química da água?",
+    "answer": [
+      {
+        "text": "CO2",
+        "alternative": "A"
+      },
+      {
+        "text": "H2O",
+        "alternative": "B"
+      },
+      {
+        "text": "O2",
+        "alternative": "C"
+      },
+      {
+        "text": "NaCl",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "question": "Qual é o maior deserto do mundo?",
+    "answer": [
+      {
+        "text": "Deserto do Saara",
+        "alternative": "A"
+      },
+      {
+        "text": "Deserto da Arábia",
+        "alternative": "B"
+      },
+      {
+        "text": "Deserto da Antártida",
+        "alternative": "C"
+      },
+      {
+        "text": "Deserto de Gobi",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "question": "Quem é conhecido como o 'Pai da Computação'?",
+    "answer": [
+      {
+        "text": "Bill Gates",
+        "alternative": "A"
+      },
+      {
+        "text": "Steve Jobs",
+        "alternative": "B"
+      },
+      {
+        "text": "Charles Babbage",
+        "alternative": "C"
+      },
+      {
+        "text": "Alan Turing",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "question": "Qual é o animal mais rápido do mundo?",
+    "answer": [
+      {
+        "text": "Leopardo",
+        "alternative": "A"
+      },
+      {
+        "text": "Águia",
+        "alternative": "B"
+      },
+      {
+        "text": "Guepardo",
+        "alternative": "C"
+      },
+      {
+        "text": "Cavalo",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "question": "Qual é a montanha mais alta do mundo?",
+    "answer": [
+      {
+        "text": "Monte Kilimanjaro",
+        "alternative": "A"
+      },
+      {
+        "text": "Monte Everest",
+        "alternative": "B"
+      },
+      {
+        "text": "Monte Aconcágua",
+        "alternative": "C"
+      },
+      {
+        "text": "Monte McKinley",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "question": "Qual é o rio mais longo do mundo?",
+    "answer": [
+      {
+        "text": "Rio Amazonas",
+        "alternative": "A"
+      },
+      {
+        "text": "Rio Nilo",
+        "alternative": "B"
+      },
+      {
+        "text": "Rio Yangtzé",
+        "alternative": "C"
+      },
+      {
+        "text": "Rio Mississippi",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "question": "Quem foi o primeiro presidente dos Estados Unidos?",
+    "answer": [
+      {
+        "text": "Abraham Lincoln",
+        "alternative": "A"
+      },
+      {
+        "text": "Thomas Jefferson",
+        "alternative": "B"
+      },
+      {
+        "text": "George Washington",
+        "alternative": "C"
+      },
+      {
+        "text": "John Adams",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "question": "Qual é o símbolo químico do ouro?",
+    "answer": [
+      {
+        "text": "Ag",
+        "alternative": "A"
+      },
+      {
+        "text": "Au",
+        "alternative": "B"
+      },
+      {
+        "text": "Pb",
+        "alternative": "C"
+      },
+      {
+        "text": "Fe",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "question": "Qual país sediou os Jogos Olímpicos de 2016?",
+    "answer": [
+      {
+        "text": "China",
+        "alternative": "A"
+      },
+      {
+        "text": "Japão",
+        "alternative": "B"
+      },
+      {
+        "text": "Brasil",
+        "alternative": "C"
+      },
+      {
+        "text": "Rússia",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "question": "Quem escreveu a peça 'Hamlet'?",
+    "answer": [
+      {
+        "text": "Oscar Wilde",
+        "alternative": "A"
+      },
+      {
+        "text": "George Bernard Shaw",
+        "alternative": "B"
+      },
+      {
+        "text": "William Shakespeare",
+        "alternative": "C"
+      },
+      {
+        "text": "Christopher Marlowe",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "question": "Qual é o processo pelo qual as plantas produzem energia?",
+    "answer": [
+      {
+        "text": "Respiração",
+        "alternative": "A"
+      },
+      {
+        "text": "Fotossíntese",
+        "alternative": "B"
+      },
+      {
+        "text": "Fermentação",
+        "alternative": "C"
+      },
+      {
+        "text": "Oxidação",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "question": "Qual é a velocidade da luz no vácuo?",
+    "answer": [
+      {
+        "text": "300,000 km/s",
+        "alternative": "A"
+      },
+      {
+        "text": "150,000 km/s",
+        "alternative": "B"
+      },
+      {
+        "text": "100,000 km/s",
+        "alternative": "C"
+      },
+      {
+        "text": "200,000 km/s",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "question": "Qual é o maior órgão do corpo humano?",
+    "answer": [
+      {
+        "text": "Fígado",
+        "alternative": "A"
+      },
+      {
+        "text": "Cérebro",
+        "alternative": "B"
+      },
+      {
+        "text": "Pulmão",
+        "alternative": "C"
+      },
+      {
+        "text": "Pele",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "D"
+  },
+  {
+    "question": "Quem pintou 'A Última Ceia'?",
+    "answer": [
+      {
+        "text": "Michelangelo",
+        "alternative": "A"
+      },
+      {
+        "text": "Leonardo da Vinci",
+        "alternative": "B"
+      },
+      {
+        "text": "Raphael",
+        "alternative": "C"
+      },
+      {
+        "text": "Donatello",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "question": "Qual é o elemento químico representado pelo símbolo 'O'?",
+    "answer": [
+      {
+        "text": "Ouro",
+        "alternative": "A"
+      },
+      {
+        "text": "Oxigênio",
+        "alternative": "B"
+      },
+      {
+        "text": "Prata",
+        "alternative": "C"
+      },
+      {
+        "text": "Platina",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "question": "Qual é o país com a maior população do mundo?",
+    "answer": [
+      {
+        "text": "Índia",
+        "alternative": "A"
+      },
+      {
+        "text": "Estados Unidos",
+        "alternative": "B"
+      },
+      {
+        "text": "Indonésia",
+        "alternative": "C"
+      },
+      {
+        "text": "China",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "D"
+  },
+  {
+    "question": "Qual é o nome do famoso cientista que propôs as três leis do movimento?",
+    "answer": [
+      {
+        "text": "Albert Einstein",
+        "alternative": "A"
+      },
+      {
+        "text": "Galileu Galilei",
+        "alternative": "B"
+      },
+      {
+        "text": "Nikola Tesla",
+        "alternative": "C"
+      },
+      {
+        "text": "Isaac Newton",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "D"
+  },
+  {
+    "question": "Qual é a capital da Austrália?",
+    "answer": [
+      {
+        "text": "Sydney",
+        "alternative": "A"
+      },
+      {
+        "text": "Melbourne",
+        "alternative": "B"
+      },
+      {
+        "text": "Brisbane",
+        "alternative": "C"
+      },
+      {
+        "text": "Canberra",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "D"
+  },{
+  "question": "Qual é a linguagem de programação criada por Guido van Rossum?",
+  "answer": [
+    {
+      "text": "Java",
+      "alternative": "A"
+    },
+    {
+      "text": "Python",
+      "alternative": "B"
+    },
+    {
+      "text": "C++",
+      "alternative": "C"
+    },
+    {
+      "text": "Ruby",
+      "alternative": "D"
+    }
+  ],
+  "correctAnswer": "B"
+},
+  {
+    "question": "Qual é o nome do processo de conversão de água em vapor?",
+    "answer": [
+      {
+        "text": "Sublimação",
+        "alternative": "A"
+      },
+      {
+        "text": "Condensação",
+        "alternative": "B"
+      },
+      {
+        "text": "Evaporação",
+        "alternative": "C"
+      },
+      {
+        "text": "Fusão",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "question": "Qual é o nome do dispositivo usado para medir a pressão atmosférica?",
+    "answer": [
+      {
+        "text": "Termômetro",
+        "alternative": "A"
+      },
+      {
+        "text": "Barômetro",
+        "alternative": "B"
+      },
+      {
+        "text": "Higrômetro",
+        "alternative": "C"
+      },
+      {
+        "text": "Anemômetro",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "question": "Qual é o nome do gás mais leve conhecido?",
+    "answer": [
+      {
+        "text": "Oxigênio",
+        "alternative": "A"
+      },
+      {
+        "text": "Nitrogênio",
+        "alternative": "B"
+      },
+      {
+        "text": "Hidrogênio",
+        "alternative": "C"
+      },
+      {
+        "text": "Hélio",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "question": "Qual é o nome da galáxia onde fica o Sistema Solar?",
+    "answer": [
+      {
+        "text": "Andrômeda",
+        "alternative": "A"
+      },
+      {
+        "text": "Via Láctea",
+        "alternative": "B"
+      },
+      {
+        "text": "Triângulo",
+        "alternative": "C"
+      },
+      {
+        "text": "Sombrero",
+        "alternative": "D"
+      }
+    ],
+    "correctAnswer": "B"
+  }
+]
