@@ -21,10 +21,10 @@ public class AuthRestController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<UserDTO> register(@RequestBody @Valid UserDTO dto) {
+    public ResponseEntity<String> register(@RequestBody @Valid UserDTO dto) {
         User user = new User(null, dto.getName(), dto.getUsername(), dto.getEmail(), dto.getPassword());
-        User save = userService.save(user);
-        return ResponseEntity.ok(new UserDTO(save));
+        userService.save(user);
+        return ResponseEntity.ok("User registered successfully");
     }
 
     @PostMapping("/login")
