@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "c065bb21-dd84-4a2e-9c3d-40111f07b10c",
+		"name": "Perguntou",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22432141"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Vinicius Craveiro\",\n    \"username\": \"vinicius.craveiro\",\n    \"email\": \"viniciuscraveiroo@gmail.com\",\n    \"password\": \"V12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v0/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"vinicius.craveiro\",\n    \"password\": \"V12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v0/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"question\": \"string tem mais de 10 caracteres\",\n    \"answer\": [\n        {\n            \"text\": \"testeA\",\n            \"alternative\": \"A\"\n        },\n                {\n            \"text\": \"teste B\",\n            \"alternative\": \"B\"\n        },\n                {\n            \"text\": \"teste C\",\n            \"alternative\": \"C\"\n        },\n                {\n            \"text\": \"teste D\",\n            \"alternative\": \"D\"\n        }\n    ],\n    \"correctAnswer\": \"A\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v0/question",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Questions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"question\": \"Qual é a capital da França?\",\n    \"answer\": [\n      {\n        \"text\": \"Paris\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Londres\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Madri\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Roma\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"A\"\n  },\n  {\n    \"question\": \"Qual é o maior planeta do Sistema Solar?\",\n    \"answer\": [\n      {\n        \"text\": \"Terra\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Júpiter\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Marte\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Saturno\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  },\n  {\n    \"question\": \"Quem escreveu 'Dom Quixote'?\",\n    \"answer\": [\n      {\n        \"text\": \"William Shakespeare\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Miguel de Cervantes\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Gabriel García Márquez\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Jorge Luis Borges\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  },\n  {\n    \"question\": \"Qual é a fórmula química da água?\",\n    \"answer\": [\n      {\n        \"text\": \"CO2\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"H2O\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"O2\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"NaCl\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  },\n  {\n    \"question\": \"Qual é o maior deserto do mundo?\",\n    \"answer\": [\n      {\n        \"text\": \"Deserto do Saara\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Deserto da Arábia\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Deserto da Antártida\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Deserto de Gobi\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"C\"\n  },\n  {\n    \"question\": \"Quem é conhecido como o 'Pai da Computação'?\",\n    \"answer\": [\n      {\n        \"text\": \"Bill Gates\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Steve Jobs\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Charles Babbage\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Alan Turing\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"C\"\n  },\n  {\n    \"question\": \"Qual é o animal mais rápido do mundo?\",\n    \"answer\": [\n      {\n        \"text\": \"Leopardo\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Águia\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Guepardo\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Cavalo\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"C\"\n  },\n  {\n    \"question\": \"Qual é a montanha mais alta do mundo?\",\n    \"answer\": [\n      {\n        \"text\": \"Monte Kilimanjaro\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Monte Everest\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Monte Aconcágua\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Monte McKinley\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  },\n  {\n    \"question\": \"Qual é o rio mais longo do mundo?\",\n    \"answer\": [\n      {\n        \"text\": \"Rio Amazonas\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Rio Nilo\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Rio Yangtzé\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Rio Mississippi\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  },\n  {\n    \"question\": \"Quem foi o primeiro presidente dos Estados Unidos?\",\n    \"answer\": [\n      {\n        \"text\": \"Abraham Lincoln\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Thomas Jefferson\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"George Washington\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"John Adams\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"C\"\n  },\n  {\n    \"question\": \"Qual é o símbolo químico do ouro?\",\n    \"answer\": [\n      {\n        \"text\": \"Ag\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Au\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Pb\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Fe\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  },\n  {\n    \"question\": \"Qual país sediou os Jogos Olímpicos de 2016?\",\n    \"answer\": [\n      {\n        \"text\": \"China\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Japão\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Brasil\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Rússia\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"C\"\n  },\n  {\n    \"question\": \"Quem escreveu a peça 'Hamlet'?\",\n    \"answer\": [\n      {\n        \"text\": \"Oscar Wilde\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"George Bernard Shaw\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"William Shakespeare\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Christopher Marlowe\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"C\"\n  },\n  {\n    \"question\": \"Qual é o processo pelo qual as plantas produzem energia?\",\n    \"answer\": [\n      {\n        \"text\": \"Respiração\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Fotossíntese\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Fermentação\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Oxidação\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  },\n  {\n    \"question\": \"Qual é a velocidade da luz no vácuo?\",\n    \"answer\": [\n      {\n        \"text\": \"300,000 km/s\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"150,000 km/s\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"100,000 km/s\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"200,000 km/s\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"A\"\n  },\n  {\n    \"question\": \"Qual é o maior órgão do corpo humano?\",\n    \"answer\": [\n      {\n        \"text\": \"Fígado\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Cérebro\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Pulmão\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Pele\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"D\"\n  },\n  {\n    \"question\": \"Quem pintou 'A Última Ceia'?\",\n    \"answer\": [\n      {\n        \"text\": \"Michelangelo\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Leonardo da Vinci\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Raphael\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Donatello\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  },\n  {\n    \"question\": \"Qual é o elemento químico representado pelo símbolo 'O'?\",\n    \"answer\": [\n      {\n        \"text\": \"Ouro\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Oxigênio\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Prata\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Platina\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  },\n  {\n    \"question\": \"Qual é o país com a maior população do mundo?\",\n    \"answer\": [\n      {\n        \"text\": \"Índia\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Estados Unidos\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Indonésia\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"China\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"D\"\n  },\n  {\n    \"question\": \"Qual é o nome do famoso cientista que propôs as três leis do movimento?\",\n    \"answer\": [\n      {\n        \"text\": \"Albert Einstein\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Galileu Galilei\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Nikola Tesla\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Isaac Newton\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"D\"\n  },\n  {\n    \"question\": \"Qual é a capital da Austrália?\",\n    \"answer\": [\n      {\n        \"text\": \"Sydney\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Melbourne\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Brisbane\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Canberra\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"D\"\n  },{\n  \"question\": \"Qual é a linguagem de programação criada por Guido van Rossum?\",\n  \"answer\": [\n    {\n      \"text\": \"Java\",\n      \"alternative\": \"A\"\n    },\n    {\n      \"text\": \"Python\",\n      \"alternative\": \"B\"\n    },\n    {\n      \"text\": \"C++\",\n      \"alternative\": \"C\"\n    },\n    {\n      \"text\": \"Ruby\",\n      \"alternative\": \"D\"\n    }\n  ],\n  \"correctAnswer\": \"B\"\n},\n  {\n    \"question\": \"Qual é o nome do processo de conversão de água em vapor?\",\n    \"answer\": [\n      {\n        \"text\": \"Sublimação\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Condensação\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Evaporação\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Fusão\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"C\"\n  },\n  {\n    \"question\": \"Qual é o nome do dispositivo usado para medir a pressão atmosférica?\",\n    \"answer\": [\n      {\n        \"text\": \"Termômetro\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Barômetro\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Higrômetro\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Anemômetro\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  },\n  {\n    \"question\": \"Qual é o nome do gás mais leve conhecido?\",\n    \"answer\": [\n      {\n        \"text\": \"Oxigênio\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Nitrogênio\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Hidrogênio\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Hélio\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"C\"\n  },\n  {\n    \"question\": \"Qual é o nome da galáxia onde fica o Sistema Solar?\",\n    \"answer\": [\n      {\n        \"text\": \"Andrômeda\",\n        \"alternative\": \"A\"\n      },\n      {\n        \"text\": \"Via Láctea\",\n        \"alternative\": \"B\"\n      },\n      {\n        \"text\": \"Triângulo\",\n        \"alternative\": \"C\"\n      },\n      {\n        \"text\": \"Sombrero\",\n        \"alternative\": \"D\"\n      }\n    ],\n    \"correctAnswer\": \"B\"\n  }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v0/question/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"question",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Question",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v0/question",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Question Por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v0/question/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"question",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
