@@ -51,12 +51,9 @@ public class QuestionRestController {
     public ResponseEntity<List<QuestionDTO>> findAll() {
         List<Question> questions = questionService.findAll();
         List<AnswerDTO> answerList = new ArrayList<>();
-        questions.forEach(q -> {
-            answerList.addAll(q.getAnswers().stream().map(answer -> new AnswerDTO(answer.getText(), answer.getOption())).toList());
-
-        });
         List<QuestionDTO> questionsDTO =
-                questions.stream().map(q -> new QuestionDTO(q.getQuestion(), answerList, q.getCorrectAnswer())).toList();
+                questions.stream().map(q -> new QuestionDTO(q.getQuestion(), q.getAnswers().stream().map(a -> new AnswerDTO(a.getText(),
+                        a.getOption())).toList(), q.getCorrectAnswer())).toList();
         return new ResponseEntity<>(questionsDTO, HttpStatus.OK);
     }
 }
